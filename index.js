@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://frontend-restaurant-nnlq.vercel.app/",
+    origin: "https://frontend-restaurant-nnlq.vercel.app",
     credentials: true,
   }),
 ); // Autorise le frontend à parler au backend
