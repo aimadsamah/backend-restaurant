@@ -24,6 +24,10 @@ mongoose
     console.log(err);
   });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use("/api/dishes", dishRoute);
