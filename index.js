@@ -7,7 +7,12 @@ const reservationRoute = require("./routes/reservations");
 const cors = require("cors");
 const app = express();
 
-app.use(cors()); // Autorise le frontend à parler au backend
+app.use(
+  cors({
+    origin: "https://frontend-restaurant-nnlq.vercel.app/",
+    credentials: true,
+  }),
+); // Autorise le frontend à parler au backend
 dotenv.config();
 
 mongoose
